@@ -129,7 +129,6 @@ extension CaptureViewController: AVCapturePhotoCaptureDelegate {
       .converting(toDepthDataType: kCVPixelFormatType_DisparityFloat16)
       .applyingExifOrientation(orientation)
       .depthDataMap
-    depthMap.normalizeFloat16()
 
     let normalizedDepthData = try! depthData.replacingDepthDataMap(with: depthMap)
 
